@@ -43,6 +43,8 @@ system:
     bucket: mindskip
     access-key: KabOBTPGVll2sSV8d1OIlW8G4_n_cReE7RSsLafA
     secret-key: mSltk9_9KtCdFetCmxvvCAgsBg8JZHiXMuQeqSJA
+  fu:
+    path: /upload/xzs
 
 
 #mybatis page helper

@@ -18,6 +18,7 @@ public class SystemConfig {
     private List<String> securityIgnoreUrls;
     private WxConfig wx;
     private QnConfig qn;
+    private FuConfig fu;
 
     /**
      * Gets pwd key.
@@ -89,6 +90,14 @@ public class SystemConfig {
      */
     public void setQn(QnConfig qn) {
         this.qn = qn;
+    }
+
+    public FuConfig getFu() {
+        return fu;
+    }
+
+    public void setFu(FuConfig fu) {
+        this.fu = fu;
     }
 
 }
