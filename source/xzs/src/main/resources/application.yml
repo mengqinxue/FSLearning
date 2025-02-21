@@ -44,7 +44,7 @@ system:
     access-key: KabOBTPGVll2sSV8d1OIlW8G4_n_cReE7RSsLafA
     secret-key: mSltk9_9KtCdFetCmxvvCAgsBg8JZHiXMuQeqSJA
   fu:
-    path: /upload/xzs
+    path: /upload/images
 
 
 #mybatis page helper
@@ -60,7 +60,8 @@ spring:
     hikari:
       idle-timeout: 600000  #10 min
       max-lifetime: 1800000 #30 min
-
+#  resources:
+#    static-locations: "file:/static/,classpath:/static/"
 
   #runningtime environment
   profiles:
