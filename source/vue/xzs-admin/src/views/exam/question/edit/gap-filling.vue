@@ -68,10 +68,10 @@ export default {
         title: '',
         items: [
         ],
-        analyze: '',
+        analyze: 'None',
         correct: '',
-        score: '',
-        difficult: 0
+        score: '1.0',
+        difficult: 1
       },
       subjectFilter: null,
       formLoading: false,

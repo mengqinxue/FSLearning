@@ -75,10 +75,10 @@ export default {
           { id: null, prefix: 'A', content: '是' },
           { id: null, prefix: 'B', content: '否' }
         ],
-        analyze: '',
+        analyze: 'None',
         correct: '',
-        score: '',
-        difficult: 0
+        score: '1.0',
+        difficult: 1
       },
       subjectFilter: null,
       formLoading: false,

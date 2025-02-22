@@ -79,11 +79,11 @@ export default {
           { id: null, prefix: 'C', content: '' },
           { id: null, prefix: 'D', content: '' }
         ],
-        analyze: '',
+        analyze: 'None',
         correct: '',
         correctArray: [],
-        score: '',
-        difficult: 0
+        score: '1.0',
+        difficult: 1
       },
       subjectFilter: null,
       formLoading: false,
