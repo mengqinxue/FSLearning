@@ -51,6 +51,11 @@ public class FileUploadImpl implements FileUpload {
 
         FuConfig fuConfig = systemConfig.getFu();
         try {
+
+//            String workingDir = System.getProperty("user.dir");
+//            logger.info("Current working directory: " + workingDir);
+//
+//            String filePath = workingDir + "/upload/images/" + extName;
             String filePath = fuConfig.getPath() + "/" + extName;
             Path path = Paths.get(filePath);
 

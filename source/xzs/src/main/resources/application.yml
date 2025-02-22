@@ -44,7 +44,7 @@ system:
     access-key: KabOBTPGVll2sSV8d1OIlW8G4_n_cReE7RSsLafA
     secret-key: mSltk9_9KtCdFetCmxvvCAgsBg8JZHiXMuQeqSJA
   fu:
-    path: /upload/images
+    path: /app/upload/images
 
 
 #mybatis page helper
