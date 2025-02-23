@@ -4,7 +4,7 @@
       <el-col :span="7">
         <el-card>
           <div slot="header" class="clearfix">
-            <span>个人信息</span>
+            <span>Personal Information</span>
           </div>
           <el-row style="text-align: center">
             <el-upload action="/api/student/upload/image"  accept=".jpg,.png" :show-file-list="false"  :on-success="uploadSuccess">
@@ -16,16 +16,16 @@
           </el-row>
           <el-divider/>
           <el-row class="user-info-fullInfo">
-            <label>姓名：{{form.realName}}</label><br/>
-            <label>年级：{{levelFormatter(form.userLevel)}}</label><br/>
-            <label>注册时间：{{form.createTime}}</label><br/>
+            <label>Name:{{form.realName}}</label><br/>
+            <label>Grade: {{levelFormatter(form.userLevel)}}</label><br/>
+            <label>Registration: {{form.createTime}}</label><br/>
           </el-row>
         </el-card>
       </el-col>
       <el-col :span="17">
         <el-card shadow="hover">
-          <el-tabs active-name="event" type="card">
-            <el-tab-pane label="用户动态" name="event">
+          <el-tabs active-name="update" type="card">
+            <!-- <el-tab-pane label="Activities" name="event">
               <div class="block">
                 <el-timeline>
                   <el-timeline-item  :timestamp="item.createTime" placement="top" :key="item.id" v-for="item in event">
@@ -35,35 +35,35 @@
                   </el-timeline-item>
                 </el-timeline>
               </div>
-            </el-tab-pane>
-            <el-tab-pane label="个人资料修改" name="update">
+            </el-tab-pane> -->
+            <el-tab-pane label="Personal Info Update" name="update">
               <el-form :model="form" ref="form" label-width="100px" v-loading="formLoading" :rules="rules">
-                <el-form-item label="真实姓名：" prop="realName" required>
+                <el-form-item label="Name：" prop="realName" required>
                   <el-input v-model="form.realName"></el-input>
                 </el-form-item>
-                <el-form-item label="年龄：">
+                <el-form-item label="Age：">
                   <el-input v-model="form.age"></el-input>
                 </el-form-item>
-                <el-form-item label="性别：">
-                  <el-select v-model="form.sex" placeholder="性别" clearable>
+                <el-form-item label="Gender：">
+                  <el-select v-model="form.sex" placeholder="Gender" clearable>
                     <el-option v-for="item in sexEnum" :key="item.key" :value="item.key"
                                :label="item.value"></el-option>
                   </el-select>
                 </el-form-item>
-                <el-form-item label="出生日期：">
-                  <el-date-picker v-model="form.birthDay" value-format="yyyy-MM-dd" type="date" placeholder="选择日期"/>
+                <el-form-item label="Birthday：">
+                  <el-date-picker v-model="form.birthDay" value-format="yyyy-MM-dd" type="date" placeholder="Select a date"/>
                 </el-form-item>
-                <el-form-item label="手机：">
+                <el-form-item label="Mobile：">
                   <el-input v-model="form.phone"></el-input>
                 </el-form-item>
-                <el-form-item label="年级：" prop="userLevel" required>
-                  <el-select v-model="form.userLevel" placeholder="年级">
+                <el-form-item label="Grade：" prop="userLevel" required>
+                  <el-select v-model="form.userLevel" placeholder="Grade">
                     <el-option v-for="item in levelEnum" :key="item.key" :value="item.key"
                                :label="item.value"></el-option>
                   </el-select>
                 </el-form-item>
                 <el-form-item>
-                  <el-button type="primary" @click="submitForm">更新</el-button>
+                  <el-button type="primary" @click="submitForm">Update</el-button>
                 </el-form-item>
               </el-form>
             </el-tab-pane>
@@ -96,10 +96,10 @@ export default {
       formLoading: false,
       rules: {
         realName: [
-          { required: true, message: '请输入真实姓名', trigger: 'blur' }
+          { required: true, message: 'Please input your name', trigger: 'blur' }
         ],
         userLevel: [
-          { required: true, message: '请选择年级', trigger: 'change' }
+          { required: true, message: 'Please select your grade', trigger: 'change' }
         ]
       }
     }

@@ -5,7 +5,8 @@ const mtjwxsdk = require('./utils/mtj-wx-sdk.js');
 
 App({
   globalData: {
-    baseAPI: "http://localhost:8000",
+    // baseAPI: "http://localhost:8000",
+    baseAPI: "http://39.104.48.145",
     pageSize: 20
   },
   onLaunch: function() {

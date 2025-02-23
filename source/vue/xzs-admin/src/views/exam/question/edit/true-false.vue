@@ -72,8 +72,8 @@ export default {
         subjectId: null,
         title: '',
         items: [
-          { id: null, prefix: 'A', content: '是' },
-          { id: null, prefix: 'B', content: '否' }
+          { id: null, prefix: 'A', content: 'True' },
+          { id: null, prefix: 'B', content: 'False' }
         ],
         analyze: 'None',
         correct: '',

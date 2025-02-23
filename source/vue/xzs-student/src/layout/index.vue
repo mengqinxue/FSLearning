@@ -7,22 +7,22 @@
             <el-avatar  class="el-dropdown-avatar" size="medium"  :src="userInfo.imagePath === null ? require('@/assets/avatar.png') : userInfo.imagePath"></el-avatar>
           </el-badge>
           <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item @click.native="$router.push({path:'/user/index'})">个人中心</el-dropdown-item>
+            <el-dropdown-item @click.native="$router.push({path:'/user/index'})">User Info</el-dropdown-item>
             <el-dropdown-item @click.native="$router.push({path:'/user/message'})">
               <el-badge :value="messageCount" v-if="messageCount!==0">
-                <span>消息中心</span>
+                <span>Message Center</span>
               </el-badge>
-              <span  v-if="messageCount===0">消息中心</span>
+              <span  v-if="messageCount===0">Message Center</span>
             </el-dropdown-item>
-            <el-dropdown-item @click.native="logout" divided>退出</el-dropdown-item>
+            <el-dropdown-item @click.native="logout" divided>Exit</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
       </div>
       <el-menu class="el-menu-title" mode="horizontal" :default-active="defaultUrl" :router="true">
-        <el-menu-item index="/index">首页</el-menu-item>
-        <el-menu-item index="/paper/index">试卷中心</el-menu-item>
-        <el-menu-item index="/record/index">考试记录</el-menu-item>
-        <el-menu-item index="/question/index">错题本</el-menu-item>
+        <el-menu-item index="/index">Home Page</el-menu-item>
+        <el-menu-item index="/paper/index">Practice Center</el-menu-item>
+        <el-menu-item index="/record/index">Practice Record</el-menu-item>
+        <el-menu-item index="/question/index">Mistake Collection</el-menu-item>
       </el-menu>
       <div>
         <a href="/"><img src="@/assets/logo.png" height="56"/></a>

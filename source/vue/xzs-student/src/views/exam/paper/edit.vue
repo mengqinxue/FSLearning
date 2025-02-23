@@ -18,8 +18,8 @@
     <el-header class="align-center">
       <h1>{{form.name}}</h1>
       <div>
-        <span class="question-title-padding">试卷得分：{{answer.score}}</span>
-        <span class="question-title-padding">试卷耗时：{{formatSeconds(answer.doTime)}}</span>
+        <span class="question-title-padding">Score：{{answer.score}}</span>
+        <span class="question-title-padding">Time to Spend：{{formatSeconds(answer.doTime)}}</span>
       </div>
     </el-header>
     <el-main>
@@ -45,8 +45,8 @@
           </el-card>
         </el-row>
         <el-row class="do-align-center">
-          <el-button type="primary" @click="submitForm">提交</el-button>
-          <el-button>取消</el-button>
+          <el-button type="primary" @click="submitForm">Submit</el-button>
+          <el-button>Cancel</el-button>
         </el-row>
       </el-form>
     </el-main>
@@ -92,8 +92,8 @@ export default {
       _this.formLoading = true
       examPaperAnswerApi.edit(this.answer).then(re => {
         if (re.code === 1) {
-          _this.$alert('试卷得分：' + re.response + '分', '考试结果', {
-            confirmButtonText: '返回考试记录',
+          _this.$alert('Score：' + re.response + '', 'Result', {
+            confirmButtonText: 'Return to Results',
             callback: action => {
               _this.$router.push('/record/index')
             }

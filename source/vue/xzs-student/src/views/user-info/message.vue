@@ -2,7 +2,7 @@
   <div style="margin-top: 10px" class="app-contain">
     <el-card style="padding-top: 50px;padding-bottom: 50px">
       <div class="el-table__empty-text" style="text-align: center;width: 100%" v-if="total ===0">
-        <span>暂无消息</span>
+        <span>No more message</span>
       </div>
       <el-collapse @change="handleChange" class="student-message-list" v-if="total !==0 " accordion>
         <el-collapse-item :name="item.id" :key="item.id" v-for="item in tableData">
@@ -11,13 +11,13 @@
             <el-tag style=" margin: 0 8px 0 auto;" :type="readTagFormat(item.readed)">{{readTextFormat(item.readed)}}</el-tag>
           </template>
           <el-row>
-            <label>发送人：{{item.sendUserName}}</label>
+            <label>Sender：{{item.sendUserName}}</label>
           </el-row>
           <el-row>
-            <label>发送时间：{{item.createTime}}</label>
+            <label>Time：{{item.createTime}}</label>
           </el-row>
           <el-row>
-            <label>发送内容：{{item.content}}</label>
+            <label>Content：{{item.content}}</label>
           </el-row>
         </el-collapse-item>
       </el-collapse>

@@ -1,7 +1,7 @@
 // initial state
 const state = {
   user: {
-    sexEnum: [{ key: 1, value: '男' }, { key: 2, value: '女' }],
+    sexEnum: [{ key: 1, value: 'Male' }, { key: 2, value: 'Female' }],
     levelEnum: [
          { key: 1,  value: 'OCExam' }
         // ,{ key: 2,  value: 'Preschool' }
@@ -28,17 +28,17 @@ const state = {
   },
   exam: {
     examPaper: {
-      paperTypeEnum: [{ key: 1, value: '固定试卷' }, { key: 4, value: '时段试卷' }]
+      paperTypeEnum: [{ key: 1, value: 'Practice' }, { key: 4, value: 'Mock Test' }]
     },
     examPaperAnswer: {
-      statusEnum: [{ key: 1, value: '待批改' }, { key: 2, value: '完成' }],
+      statusEnum: [{ key: 1, value: '待批改' }, { key: 2, value: 'Completed' }],
       statusTag: [{ key: 1, value: 'warning' }, { key: 2, value: 'success' }]
     },
     question: {
-      typeEnum: [{ key: 1, value: '单选题' }, { key: 2, value: '多选题' }, { key: 3, value: '判断题' }, { key: 4, value: '填空题' }, { key: 5, value: '简答题' }],
+      typeEnum: [{ key: 1, value: 'Single Choice' }, { key: 2, value: 'Multiple Choice' }, { key: 3, value: 'T/F Question' }, { key: 4, value: 'Completion Question' }, { key: 5, value: '简答题' }],
       answer: {
         doRightTag: [{ key: true, value: 'success' }, { key: false, value: 'danger' }, { key: null, value: 'warning' }],
-        doRightEnum: [{ key: true, value: '正确' }, { key: false, value: '错误' }, { key: null, value: '待批改' }],
+        doRightEnum: [{ key: true, value: 'Correct' }, { key: false, value: 'Wrong' }, { key: null, value: '待批改' }],
         doCompletedTag: [{ key: false, value: 'info' }, { key: true, value: 'success' }]
       }
     }

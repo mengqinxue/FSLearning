@@ -3,10 +3,10 @@
     <el-row :gutter="50">
       <el-col :span="14">
         <el-table v-loading="listLoading" :data="tableData" fit highlight-current-row style="width: 100%" @row-click="itemSelect">
-          <el-table-column prop="shortTitle" label="题干"  show-overflow-tooltip />
-          <el-table-column prop="questionType" label="题型"  :formatter="questionTypeFormatter" width="70" />
-          <el-table-column prop="subjectName" label="学科"  width="50" />
-          <el-table-column prop="createTime" label="做题时间"  width="170" />
+          <el-table-column prop="shortTitle" label="Question"  show-overflow-tooltip />
+          <el-table-column prop="questionType" label="Type"  :formatter="questionTypeFormatter" width="70" />
+          <el-table-column prop="subjectName" label="Subject"  width="75" />
+          <el-table-column prop="createTime" label="Time"  width="150" />
         </el-table>
         <pagination v-show="total>0" :total="total" :background="false" :page.sync="queryParam.pageIndex" :limit.sync="queryParam.pageSize"
                     @pagination="search" style="margin-top: 20px"/>
